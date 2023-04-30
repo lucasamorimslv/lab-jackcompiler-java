@@ -14,9 +14,9 @@ public class App
     {
 
     
-        String input = "289";
+        String input = "variavelQualquer";
         Scanner scan = new Scanner (input.getBytes());
-        System.out.println(scan.nextToken());
+        System.out.println(scan.nextToken());  
         for (Token tk = scan.nextToken(); tk.type != EOF; tk = scan.nextToken()) {
             System.out.println(tk);
         }
