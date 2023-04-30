@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public enum TokenType {
-    PLUS,MINUS, EQ, SEMICOLON,
+    PLUS,MINUS, EQ, SEMICOLON,ASTERISK, SLASH,COMMA,DOT,
 
      // Literals.
      NUMBER,
@@ -36,10 +36,17 @@ public enum TokenType {
      DO,
      ELSE,
      RETURN,
-
      EOF,
+     ILLEGAL,
 
-     ILLEGAL;
+     // symbols
+     LPAREN,RPAREN,
+     LBRACE, RBRACE,
+     LBRACKET,RBRACKET,
+
+     AND, OR, NOT,
+
+     LT, GT;
 
      static public boolean isSymbol (char c) {
         String symbols = "{}()[].,;+-*/&|<>=~";
