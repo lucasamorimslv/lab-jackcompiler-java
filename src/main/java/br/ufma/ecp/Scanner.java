@@ -80,9 +80,8 @@ public class Scanner {
         switch (ch) {
 
             case '/':
-                  advance();
-                  return new Token (TokenType.SLASH,"/");
-  
+                advance();
+                return new Token (TokenType.SLASH,"/");
             case '+':
                 advance();
                 return new Token (TokenType.PLUS,"+");
@@ -104,7 +103,6 @@ public class Scanner {
             case '~':
                 advance();
                 return new Token (TokenType.NOT,"~"); 
-
             case '>':
                 advance();
                 return new Token (TokenType.GT,">"); 
@@ -114,7 +112,6 @@ public class Scanner {
             case '=':
                 advance();
                 return new Token (TokenType.EQ,"="); 
-        
             case '(':
                 advance();
                 return new Token (TokenType.LPAREN,"("); 
@@ -139,6 +136,8 @@ public class Scanner {
             case ',':
                 advance();
                 return new Token (TokenType.COMMA,",");
+            case '"':
+                return string();
             case 0:
                 return new Token (EOF,"EOF");
             default:
