@@ -14,8 +14,9 @@ public class App
     {
 
     
-        String input = "45  + if - \"ola\" laranja 876";
+        String input = "289";
         Scanner scan = new Scanner (input.getBytes());
+        System.out.println(scan.nextToken());
         for (Token tk = scan.nextToken(); tk.type != EOF; tk = scan.nextToken()) {
             System.out.println(tk);
         }
