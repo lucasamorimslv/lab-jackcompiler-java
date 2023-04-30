@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public enum TokenType {
-    PLUS,MINUS,
+    PLUS,MINUS, EQ, SEMICOLON,
 
      // Literals.
      NUMBER,
@@ -20,6 +20,22 @@ public enum TokenType {
      IF,
      CLASS,
      CONSTRUCTOR,
+     FUNCTION,
+     FIELD,
+     STATIC,
+     VAR,
+     INT,
+     CHAR,
+     BOOLEAN,
+     VOID,
+     TRUE,
+     FALSE,
+     NULL,
+     THIS,
+     LET,
+     DO,
+     ELSE,
+     RETURN,
 
      EOF,
 

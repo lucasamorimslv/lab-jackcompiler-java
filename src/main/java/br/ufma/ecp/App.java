@@ -14,11 +14,10 @@ public class App
     {
 
     
-        String input = "variavelQualquer";
+        String input = "45 variavel while if";
         Scanner scan = new Scanner (input.getBytes());
-        System.out.println(scan.nextToken());  
         for (Token tk = scan.nextToken(); tk.type != EOF; tk = scan.nextToken()) {
-            System.out.println(tk);
+                System.out.println(tk);
         }
 
         /*
