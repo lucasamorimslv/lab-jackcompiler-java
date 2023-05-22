@@ -83,7 +83,6 @@ public class Parser {
         return new ParseError();
     }
 
-
     void parseTerm() {
         printNonTerminal("term");
         switch (peekToken.type) {
@@ -111,5 +110,17 @@ public class Parser {
         printNonTerminal("/term");
       }
 
+        static public boolean isOperator(String op) {
+            return "+-*/<>=~&|".contains(op);
+        }
 
+        void parseExpression() {
+            printNonTerminal("expression");
+            parseTerm ();
+            while (isOperator(peekToken.lexeme)) {
+                expectPeek(peekToken.type);
+                parseTerm();
+            }
+            printNonTerminal("/expression");
+        }
 }
