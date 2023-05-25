@@ -271,7 +271,19 @@ public class Parser {
         printNonTerminal("/subroutineBody");
     }
 
-    private void parseStatements() {
+    public void parseStatements() {
+        printNonTerminal("statements");
+        while (peekToken.type == TokenType.WHILE ||
+                peekToken.type == TokenType.IF ||
+                peekToken.type == TokenType.LET ||
+                peekToken.type == TokenType.DO ||
+                peekToken.type == TokenType.RETURN) {
+            parseStatement();
+        }
+        printNonTerminal("/statements");
+    }
+
+    private void parseStatement() {
     }
 
 
